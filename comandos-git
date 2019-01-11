@@ -1,0 +1,15 @@
+* git init (inicia GIT en la carpeta en la que esta ubicado)
+* git add . agrega todos los archivos a git para trabajar con ellos
+* git commit -m "comentario" guarda una version nueva con el comentario de nombre
+* git status Ver en que status (wd, sa, r) están los docs
+* git push Subir los archivos a un server (Github)
+* git pull  Traer los archivos de un server, traer los cambios de tus compañeros
+* git clone Hacerte una copia de lo que está en el server a tu PC
+* git checkout -- <file> Para revertir los cambios de los archivos
+* git diff <file> Para ver las diferencias hechas en los archivos
+* git branch Ver las ramas que hay ("master" es la rama default)
+* git branch "nombre" Crear una nueva rama
+* git checkout "nombre" Ir a una rama en especifico 
+*  git config -- global user.email "email" Para configurar email del usuario
+*  git config -- global user.name "nombre" Para configurar nombre del usuario
+git pull and git push
