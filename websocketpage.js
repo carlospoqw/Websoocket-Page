@@ -1,13 +1,14 @@
 //llamado de cosas a usar
 var express = require('express');
 var socket =require('socket.io');
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
+
 //app setup
 var app = require('express')();
 var http = require('http').Server(app);
-app.set('port',process.env.PORT || 8080);
+app.set('port',PORT);
 
-var server = app.listen(8080,function(){
+var server = app.listen(PORT,function(){
 	var host = server.address().address;
  	var port = server.address().port;
   	console.log('Example app listening at http://', host,' and port ', port);
