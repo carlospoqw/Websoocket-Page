@@ -1,7 +1,7 @@
 //llamado de cosas a usar
 var express = require('express');
 var socket =require('socket.io');
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 4000;
 
 //app setup
 var app = require('express')();
