@@ -1,1 +1,1 @@
-web : node websocketpage.js
+worker : node websocketpage.js
