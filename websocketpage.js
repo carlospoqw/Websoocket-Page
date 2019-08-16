@@ -1,7 +1,7 @@
 //llamado de cosas a usar
 var express = require('express');
 var socket = require('socket.io');
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 //app setup
 var app = require('express')();
@@ -17,12 +17,10 @@ var server = app.listen(PORT,function(){
 //llama a la carpeta y usa su index.html
 app.use(express.static('paginas'));
 
-app.get('/',function(req,res){
-	//request : son cabeceras y datos que nos envia el navegador.
-	//response : son todo lo que enviamos desde el servidor.
-	res.redirect('/todo');
-	
+app.get('/', function(req, res, next){
+    res.sendStatus(200);
 });
+
 var io = socket(server);
 
 io.on('connection',function(socket){
@@ -37,4 +35,3 @@ io.on('connection',function(socket){
 		socket.broadcast.emit('typing',data);
 	});
 });
-
