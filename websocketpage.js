@@ -1,7 +1,7 @@
 //llamado de cosas a usar
 var express = require('express');
-var socket =require('socket.io');
-var PORT = process.env.PORT || 4000;
+var socket = require('socket.io');
+var PORT = process.env.PORT || 8080;
 
 //app setup
 var app = require('express')();
@@ -22,12 +22,11 @@ app.get('/',function(req,res){
 	//response : son todo lo que enviamos desde el servidor.
 	res.sendFile(__dirname + '/index.html');
 });
-//socket setup
-var io = require('socket.io')(http);
+var io = socket(server);
 
 io.on('connection',function(socket){
 	console.log('conectado al socket ',socket.id);
-
+	console.log(http);
 	socket.on('chat',function(data){
 		//todos los sockets io.sockets
 		io.sockets.emit('chat',data);
@@ -38,6 +37,3 @@ io.on('connection',function(socket){
 	});
 });
 
-http.listen(PORT,function(){
-	console.log('el servidor esta escuchando el puerto %s',PORT);
-});
