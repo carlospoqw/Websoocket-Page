@@ -4,6 +4,7 @@
   "description": "my websocket page",
   "main": "websocketpage.js",
   "scripts": {
+    "start": "node websocketpage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carlospoqw",
