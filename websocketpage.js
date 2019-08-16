@@ -21,7 +21,7 @@ app.get('/',function(req,res){
 	//request : son cabeceras y datos que nos envia el navegador.
 	//response : son todo lo que enviamos desde el servidor.
 	res.redirect('/todo');
-	res.sendFile(__dirname + '/index.html');
+	
 });
 var io = socket(server);
 
