@@ -20,6 +20,7 @@ app.use(express.static('paginas'));
 app.get('/',function(req,res){
 	//request : son cabeceras y datos que nos envia el navegador.
 	//response : son todo lo que enviamos desde el servidor.
+	res.redirect('/todo');
 	res.sendFile(__dirname + '/index.html');
 });
 var io = socket(server);
@@ -36,7 +37,3 @@ io.on('connection',function(socket){
 		socket.broadcast.emit('typing',data);
 	});
 });
-
-app.get('/', function(req, res){
-	res.redirect('/todo');
- });
