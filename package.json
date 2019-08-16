@@ -2,8 +2,9 @@
   "name": "websocketpage",
   "version": "1.0.0",
   "description": "my websocket page",
-  "main": "node websocketpage.js",
+  "main": "websocketpage.js",
   "scripts": {
+    "start": "node websocketpage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "carlospoqw",
