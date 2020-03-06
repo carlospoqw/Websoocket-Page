@@ -7,24 +7,29 @@
     <link rel="stylesheet" type="text/css" href="estilo.css">
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="socket.io.js"></script>
+    <script src="sketch.js"></script>
 
 </head>
 
 <body>
-    <div id="sala-chat">
-        <h2>Sala de Chat v3</h2>
-        <div id="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
+    <section class="container">
+        <div class="one"></div>
+        <div id="sala-chat">
+            <h2>Sala de Chat v3</h2>
+            <div id="chat-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <input id="handle" type="text" placeholder="nick" />
+            <input id="message" type="text" placeholder="mensaje" />
+            <button id="send">Enviar</button>
         </div>
-        <input id="handle" type="text" placeholder="nick" />
-        <input id="message" type="text" placeholder="mensaje" />
-        <button id="send">Enviar</button>
-    </div>
+    </section>
+
     <script type="text/javascript" src="scripts.js"></script>
     <script src="../p5.js"></script>
     <script src="../addons/p5.sound.min.js"></script>
-    <script src="sketch.js"></script>
+
 </body>
 
 </html>
