@@ -37,11 +37,3 @@ function draw() {
     song.rate(sliderSpeed.value());
 
 }
-
-
-function playStop() {
-    socket.emit('playPause', {
-        handle: handle.value
-    });
-
-}

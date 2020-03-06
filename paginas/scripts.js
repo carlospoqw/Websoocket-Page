@@ -22,9 +22,12 @@ message.addEventListener('keypress', function() {
         handle: handle.value
     });
 });
-buttonPlayStop.addEventListener('click', function() {
 
-});
+function playStop() {
+    socket.emit('playPause', {
+        handle: handle.value
+    });
+}
 //variable para crear un timer de limpieza del feedback
 var clearFeedback;
 //inicializa el feedback como oculto para que no aparesca apenas se escribe en el
