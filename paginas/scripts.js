@@ -53,7 +53,7 @@ socket.on('typing', function(data) {
 
 });
 
-socket.on('playPause', function(data) {
+socket.on('playPause', function() {
     if (song.isPlaying()) {
         song.pause();
         buttonPlayStop.html('PLAY');
