@@ -7,7 +7,6 @@ var canvasHeight = 500;
 var canvasX = 20;
 var canvasY = 50;
 var buttonPlayStop;
-var divGame = document.getElementById("one");
 
 function preload() {
     song = loadSound("song.mp3");
