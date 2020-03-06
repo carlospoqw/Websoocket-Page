@@ -9,13 +9,15 @@ h2 {
 }
 
 #sala-chat {
-    max-width: 600px;
-    margin: 30px auto;
+    width: 500px;
     border: 1px solid #ddd;
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
     border-radius: 2px;
-    margin-left: 15%;
-    height: 200px;
+    float: right;
+}
+
+#one {
+    margin: 30px auto;
 }
 
 #chat-window {
@@ -72,10 +74,4 @@ button {
     padding: 12px 0;
     width: 100%;
     border-radius: 0 0 2px 2px;
-}
-
-.one {
-    width: 15%;
-    height: 200px;
-    float: left;
 }
