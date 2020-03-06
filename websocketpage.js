@@ -36,7 +36,6 @@ io.on('connection', function(socket) {
         socket.broadcast.emit('typing', data);
     });
     socket.on('playPause', function(data) {
-        //socket.broadcast todos menos el que envia
-        socket.broadcast.emit('playPause', data);
+        io.sockets.emit('playPause', data);
     });
 });

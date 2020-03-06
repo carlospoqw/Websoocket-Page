@@ -49,11 +49,9 @@ socket.on('typing', function(data) {
     clearFeedback = setTimeout(function() {
         $("#feedback").fadeOut()
     }, 1800);
-
-
 });
 
-socket.on('playPause', function() {
+socket.on('playPause', function(data) {
     if (song.isPlaying()) {
         song.pause();
         buttonPlayStop.html('PLAY');
