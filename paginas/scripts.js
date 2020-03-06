@@ -23,9 +23,7 @@ message.addEventListener('keypress', function() {
     });
 });
 buttonPlayStop.addEventListener('click', function() {
-    socket.emit('playPause', {
-        handle: handle.value
-    });
+
 });
 //variable para crear un timer de limpieza del feedback
 var clearFeedback;

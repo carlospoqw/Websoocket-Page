@@ -7,6 +7,7 @@ var canvasHeight = 500;
 var canvasX = 20;
 var canvasY = 50;
 var buttonPlayStop;
+var divGame = document.getElementById("one");
 
 function preload() {
     song = loadSound("song.mp3");
@@ -39,11 +40,8 @@ function draw() {
 
 
 function playStop() {
-    if (song.isPlaying()) {
-        song.pause();
-        buttonPlayStop.html('PLAY');
-    } else {
-        song.play();
-        buttonPlayStop.html('PAUSE');
-    }
+    socket.emit('playPause', {
+        handle: handle.value
+    });
+
 }
