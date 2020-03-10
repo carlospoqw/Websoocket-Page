@@ -13,7 +13,7 @@ var volHistory = [];
 volHistory = Array(360).fill(0);
 
 function preload() {
-    song = loadSound("song.mp3");
+    song = loadSound("song2.mp3");
 }
 
 function setup() {
@@ -48,12 +48,12 @@ function draw() {
     var songVolume = songAmplitude.getLevel();
     volHistory.push(songVolume);
     stroke(255);
-    noFill();
+    fill(237, 34, 93);
     translate(canvasWidth / 2, canvasHeight / 2);
     beginShape();
 
     for (var i = 0; i < 360; i++) {
-        var r = map(volHistory[i], 0, 1, 10, canvasHeight);
+        var r = map(volHistory[i], 0, 1, canvasHeight / 5, canvasHeight / 2);
         let x = r * cos(i);
         let y = r * sin(i);
         vertex(x, y);
