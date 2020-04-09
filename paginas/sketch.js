@@ -11,6 +11,7 @@ var divGame = document.getElementById("one");
 var songAmplitude;
 var volHistory = [];
 volHistory = Array(360).fill(0);
+let player;
 
 function preload() {
     song = loadSound("song2.mp3");
@@ -18,6 +19,7 @@ function preload() {
 
 function setup() {
     // put setup code here
+    player = new Player();
     song.play();
 
     canvas = createCanvas(canvasWidth, canvasHeight);
@@ -63,5 +65,5 @@ function draw() {
     if (volHistory.length > 360) {
         volHistory.splice(0, 1);
     }
-
+    player.draw();
 }
