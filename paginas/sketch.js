@@ -65,5 +65,5 @@ function draw() {
     if (volHistory.length > 360) {
         volHistory.splice(0, 1);
     }
-    player.draw();
+    player.show();
 }
