@@ -67,6 +67,4 @@ function draw() {
         volHistory.splice(0, 1);
     }
 
-    keyPressed();
-
 }
