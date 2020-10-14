@@ -66,26 +66,7 @@ function draw() {
     if (volHistory.length > 360) {
         volHistory.splice(0, 1);
     }
-    player.show();
+
     keyPressed();
 
-}
-
-function keyPressed() {
-    //move up
-    if (keyIsDown(UP_ARROW)) {
-        player.move('up');
-    }
-    //move down
-    if (keyIsDown(DOWN_ARROW)) {
-        player.move('down');
-    }
-    //move left
-    if (keyIsDown(LEFT_ARROW)) {
-        player.move('left');
-    }
-    //move right
-    if (keyIsDown(RIGHT_ARROW)) {
-        player.move('right');
-    }
 }
