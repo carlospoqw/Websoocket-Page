@@ -38,7 +38,16 @@ io.on('connection', function(socket) {
     socket.on('playPause', function(data) {
         io.sockets.emit('playPause', data);
     });
-    socket.on('move', function(data) {
-        io.sockets.emit('move', data);
+    socket.on('moveUp', function(data) {
+        io.sockets.emit('moveUp', data);
+    });
+    socket.on('moveLeft', function(data) {
+        io.sockets.emit('moveLeft', data);
+    });
+    socket.on('moveRight', function(data) {
+        io.sockets.emit('moveRight', data);
+    });
+    socket.on('moveDown', function(data) {
+        io.sockets.emit('moveDown', data);
     });
 });

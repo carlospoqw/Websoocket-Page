@@ -28,6 +28,37 @@ function playStop() {
         handle: handle.value
     });
 }
+
+function keyPressed() {
+    //move up
+    if (keyIsDown(UP_ARROW)) {
+        socket.emit('moveUp', {
+            handle: handle.value
+        });
+
+    }
+    //move down
+    if (keyIsDown(DOWN_ARROW)) {
+        socket.emit('moveDown', {
+            handle: handle.value
+        });
+
+    }
+    //move left
+    if (keyIsDown(LEFT_ARROW)) {
+        socket.emit('moveLeft', {
+            handle: handle.value
+        });
+
+    }
+    //move right
+    if (keyIsDown(RIGHT_ARROW)) {
+        socket.emit('moveRight', {
+            handle: handle.value
+        });
+
+    }
+}
 //variable para crear un timer de limpieza del feedback
 var clearFeedback;
 //inicializa el feedback como oculto para que no aparesca apenas se escribe en el
@@ -62,25 +93,19 @@ socket.on('playPause', function(data) {
     }
 });
 
-socket.on('move', function(data) {
+socket.on('moveUp', function(data) {
+    player.move('up');
     player.show();
-
-    function keyPressed() {
-        //move up
-        if (keyIsDown(UP_ARROW)) {
-            player.move('up');
-        }
-        //move down
-        if (keyIsDown(DOWN_ARROW)) {
-            player.move('down');
-        }
-        //move left
-        if (keyIsDown(LEFT_ARROW)) {
-            player.move('left');
-        }
-        //move right
-        if (keyIsDown(RIGHT_ARROW)) {
-            player.move('right');
-        }
-    }
+});
+socket.on('moveLeft', function(data) {
+    player.move('left');
+    player.show();
+});
+socket.on('moveRight', function(data) {
+    player.move('right');
+    player.show();
+});
+socket.on('moveDown', function(data) {
+    player.move('down');
+    player.show();
 });
