@@ -38,7 +38,7 @@ function setup() {
     songAmplitude = new p5.Amplitude();
 
     angleMode(DEGREES);
-
+    draw();
 }
 
 function draw() {
@@ -66,5 +66,33 @@ function draw() {
     if (volHistory.length > 360) {
         volHistory.splice(0, 1);
     }
+    player.show();
+    //////////////////////////
+    //player movement
+    //move up
+    if (keyIsDown(UP_ARROW)) {
+        socket.emit('moveUp', {
+            handle: handle.value
+        });
+    }
+    //move down
+    if (keyIsDown(DOWN_ARROW)) {
+        socket.emit('moveDown', {
+            handle: handle.value
+        });
+    }
+    //move left
+    if (keyIsDown(LEFT_ARROW)) {
+        socket.emit('moveLeft', {
+            handle: handle.value
+        });
+    }
+    //move right
+    if (keyIsDown(RIGHT_ARROW)) {
+        socket.emit('moveRight', {
+            handle: handle.value
+        });
+    }
+
 
 }

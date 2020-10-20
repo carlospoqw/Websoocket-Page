@@ -31,33 +31,7 @@ function playStop() {
 
 function keyPressed() {
     //move up
-    if (keyIsDown(UP_ARROW)) {
-        socket.emit('moveUp', {
-            handle: handle.value
-        });
 
-    }
-    //move down
-    if (keyIsDown(DOWN_ARROW)) {
-        socket.emit('moveDown', {
-            handle: handle.value
-        });
-
-    }
-    //move left
-    if (keyIsDown(LEFT_ARROW)) {
-        socket.emit('moveLeft', {
-            handle: handle.value
-        });
-
-    }
-    //move right
-    if (keyIsDown(RIGHT_ARROW)) {
-        socket.emit('moveRight', {
-            handle: handle.value
-        });
-
-    }
 }
 //variable para crear un timer de limpieza del feedback
 var clearFeedback;
